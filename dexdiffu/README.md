@@ -5,6 +5,10 @@ This section serves as a comprehensive guide to using DexDiffu.
 ## Installation
 
 ### Prerequisites
+Change to the dexdiffu branch:
+```shell
+git checkout dexdiffu
+```
 Ensure you have entered the correct environment before proceeding with the installation.
 
 ### Install Dependencies
