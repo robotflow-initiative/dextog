@@ -1,0 +1,13 @@
+diffusion:
+  step: 100
+sample:
+  bs: 16
+  complete_hand: True
+  category: 'sprayer'
+  scheduler_path: 'ckpts/DexDiffu'
+  ckpt_path: 'ckpts/DexDiffu/checkpoints/epoch=572-step=948888.ckpt'
+model:
+  hidden_dim: 256
+  temp_emb_cat: False
+logger:
+  name: 'DexDiffu'

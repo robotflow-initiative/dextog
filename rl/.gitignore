@@ -1,0 +1,9 @@
+.vscode
+assets
+data
+outputs
+tb_logs
+__pycache__
+tensorboard
+wandb
+.idea

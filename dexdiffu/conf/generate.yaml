@@ -1,0 +1,15 @@
+diffusion:
+  step: 100
+generate:
+  total_num: 10240
+  bs: 128
+  tta: False
+  complete_hand: True
+  scheduler_path: 'ckpts/DexDiffu'
+  ckpt_path: 'ckpts/DexDiffu/checkpoints/epoch=572-step=948888.ckpt'
+  save_path: "diffusion_output"
+model:
+  hidden_dim: 256
+  temp_emb_cat: False
+logger:
+  name: 'DexDiffu'

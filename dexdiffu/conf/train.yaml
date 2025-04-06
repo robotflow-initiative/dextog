@@ -1,0 +1,16 @@
+diffusion:
+  step: 100
+train:
+  bs: 32
+  lr: 1e-3
+  use_val_set: True
+  val_ratio: 0.2
+  add_pcd_loss: True
+  pcd_loss_coeff: 1.0
+  complete_hand: True
+  data_aug: False
+model:
+  hidden_dim: 256
+  temp_emb_cat: False
+logger:
+  name: 'DexDiffu'

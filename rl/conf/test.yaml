@@ -1,0 +1,26 @@
+task: drink
+mode: test
+train:
+  lr: 1e-4
+  epoch: 8
+  horizon: 100
+  ent_coef: 1e-3
+  proc_num: 1
+  in_proc_env_num: 1
+  ckpt: ""
+  dataset_path: "assets/grasp/TOGSample"
+policy_path:
+  stapler: 'assets/policy/stapler/rl_model_2000000_steps.zip'
+  sprayer: 'assets/policy/sprayer/rl_model_2000000_steps.zip'
+  kettle: 'assets/policy/kettle/rl_model_2000000_steps.zip'
+  drink: 'assets/policy/drink/rl_model_2000000_steps.zip'
+  ballpoint: 'assets/policy/ballpoint/rl_model_2000000_steps.zip'
+model:
+  pi:
+    - 128
+    - 128
+  vf:
+    - 128
+    - 64
+  activation: ReLU
+
