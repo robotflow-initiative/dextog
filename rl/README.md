@@ -1,11 +1,16 @@
-# Reinforcement Learning (RL) Part Guide
+# Reinforcement Learning Part Guide
 
 This section provides a thorough guide on using the reinforcement learning component of DexTOG.
 
 ## Installation
 
 ### Prerequisites
-Before you start the installation process, make sure you have entered the correct environment. This step is crucial to ensure that all the dependencies are installed correctly and work as expected.
+Change to the rl branch:
+```shell
+git checkout rl
+```
+Before you start the installation process, make sure you have entered the correct environment.
+This step is crucial to ensure that all the dependencies are installed correctly and work as expected.
 
 ### Install Dependencies
 Execute the following commands to install all the necessary dependencies. Each command plays a vital role in setting up the environment for the reinforcement learning part of DexTOG.
