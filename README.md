@@ -5,8 +5,8 @@
 This repository offers the implementation of the research paper:
 
 **DexTOG: Learning Task-Oriented Dexterous Grasp With Language Condition**  
-Authors: Jieyi Zhang, Wenqiang Xu, Zhenjun Yu, Pengfei Xie, Tutian Tang, Cewu Lu  
-Published in: **IEEE Robotics and Automation Letters**
+Jieyi Zhang, Wenqiang Xu, Zhenjun Yu, Pengfei Xie, Tutian Tang, Cewu Lu  
+**IEEE Robotics and Automation Letters**
 
 ## Installation
 
