@@ -6,7 +6,7 @@ from typing import Tuple
 from torch.optim import SGD
 from scipy.spatial import ConvexHull
 
-from ..data.utils import GripperModel
+from data.utils import GripperModel
 
 def cal_q1(gripper: GripperModel,
                Tbase: torch.Tensor,

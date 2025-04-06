@@ -8,8 +8,8 @@ import torch.nn.functional as F
 from typing import Tuple
 from diffusers import DDPMScheduler
 
-from . import TimeEmbedding, PointNetEmb
-from ..data.utils import GripperModel, compute_pose_from_vector
+from model import TimeEmbedding, PointNetEmb
+from data.utils import GripperModel, compute_pose_from_vector
 
 
 class ResBlock(nn.Module):

@@ -19,10 +19,10 @@ from tqdm import trange
 from omegaconf import DictConfig
 from diffusers import DDPMScheduler
 
-from .metrics import TTA
-from .model.diffdexgrasp import DiffDexGrasp
-from .data.dataset import ObjectDataset, TextDataset
-from .data.utils import GripperModel, compute_pose_from_vector
+from metrics import TTA
+from model.diffdexgrasp import DiffDexGrasp
+from data.dataset import ObjectDataset, TextDataset
+from data.utils import GripperModel, compute_pose_from_vector
 
 @hydra.main(version_base="v1.2", config_path='conf', config_name='generate')
 def generate(cfg: DictConfig) -> None:

@@ -15,9 +15,9 @@ from diffusers import DDPMScheduler
 from torch.utils.data import DataLoader
 from lightning.pytorch.callbacks import ModelCheckpoint
 
-from .data.utils import GripperModel
-from .model.diffdexgrasp import DiffDexGrasp
-from .data.dataset import ObjectDataset, TextDataset, GraspDataset
+from data.utils import GripperModel
+from model.diffdexgrasp import DiffDexGrasp
+from data.dataset import ObjectDataset, TextDataset, GraspDataset
 
 @hydra.main(version_base="v1.2", config_path='conf', config_name='train')
 def train(cfg: DictConfig) -> None:

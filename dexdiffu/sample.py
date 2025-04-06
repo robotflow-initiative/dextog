@@ -18,10 +18,10 @@ device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 from omegaconf import DictConfig
 from diffusers import DDPMScheduler
 
-from .metrics import cal_q1, TTA, cal_pen
-from .model.diffdexgrasp import DiffDexGrasp
-from .data.dataset import ObjectDataset, TextDataset
-from .data.utils import GripperModel, visualize_gripper_and_object, compute_pose_from_vector
+from metrics import cal_q1, TTA, cal_pen
+from model.diffdexgrasp import DiffDexGrasp
+from data.dataset import ObjectDataset, TextDataset
+from data.utils import GripperModel, visualize_gripper_and_object, compute_pose_from_vector
 
 @hydra.main(version_base="v1.2", config_path='conf', config_name='sample')
 def sample(cfg: DictConfig) -> None:
