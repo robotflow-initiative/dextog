@@ -16,8 +16,7 @@ from pyrfuniverse.utils.proc_wrapper import SubprocVecEnv
 from stable_baselines3.common.callbacks import CheckpointCallback
 
 from .dataset import get_data_dict, DataIndexLoader
-from ..envs import dextog_env_map, dextog_callback_map
-
+from envs import dextog_env_map, dextog_callback_map
 
 class env_object(object):
     def __init__(self,
