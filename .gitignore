@@ -3,3 +3,4 @@
 /tb_logs/
 /wandb/
 .idea
+**/__pycache__/*
