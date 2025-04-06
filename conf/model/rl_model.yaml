@@ -1,0 +1,7 @@
+pi:
+  - 128
+  - 128
+vf:
+  - 128
+  - 64
+activation: ReLU

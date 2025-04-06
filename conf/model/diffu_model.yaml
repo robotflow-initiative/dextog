@@ -1,0 +1,4 @@
+  backbone: 'PointNet'
+  hidden_dim: 256
+  temp_emb_cat: False
+  obj_voxel_num: 1024

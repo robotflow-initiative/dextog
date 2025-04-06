@@ -1,0 +1,5 @@
+/assets/
+/outputs/
+/tb_logs/
+/wandb/
+.idea

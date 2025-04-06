@@ -1,0 +1,77 @@
+task: stapler
+
+defaults:
+  - model@rl_model:
+      - rl_model
+  - model@diffu_model:
+      - diffu_model
+
+iter_max_time: 2
+init_dataset_path: "rl/assets/grasp/TOGSample"
+rl_output_path: "assets/tmp/rl_output"
+diffu_output_path: "assets/tmp/diffu_output"
+
+
+rl_cfg:
+  train_cfg:
+    task: ${task}
+    mode: train
+    train:
+      lr: 1e-4
+      epoch: 8
+      horizon: 100
+      ent_coef: 1e-3
+      proc_num: 20
+      in_proc_env_num: 1
+      max_timestep: 2000000
+      dataset_path: "assets/grasp/TOGSample"
+    model: ${rl_model}
+
+  test_cfg:
+    task: ${task}
+    mode: generate
+    train:
+      lr: 1e-4
+      epoch: 8
+      horizon: 100
+      ent_coef: 1e-3
+      proc_num: 20
+      in_proc_env_num: 1
+      ckpt: ""
+      dataset_path: "assets/grasp/TOGSample"
+    model: ${rl_model}
+
+diffu_cfg:
+  train_cfg:
+    diffusion:
+      step: 100
+    task: ${task}
+    train:
+      bs: 32
+      lr: 1e-3
+      use_val_set: True
+      val_ratio: 0.2
+      add_pcd_loss: True
+      pcd_loss_coeff: 1.0
+      max_iter: 12000
+      dataset_path: ""
+      complete_hand: True
+      use_task: True
+    model: ${diffu_model}
+    logger:
+      name: ${task}Model
+
+  generate_cfg:
+    diffusion:
+      step: 100
+    generate:
+      total_num: 10240
+      bs: 128
+      complete_hand: True
+      scheduler_path: 'tb_logs/DrinkModel/version_0'
+      ckpt_path: 'tb_logs/DrinkModel/version_0/checkpoints/final.ckpt'
+      save_path: "diffusion_output"
+      category: ${task}
+    model: ${diffu_model}
+    logger:
+      name: ${task}Model
