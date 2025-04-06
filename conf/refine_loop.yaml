@@ -6,11 +6,10 @@ defaults:
   - model@diffu_model:
       - diffu_model
 
-iter_max_time: 2
+iter_max_time: 10
 init_dataset_path: "rl/assets/grasp/TOGSample"
 rl_output_path: "assets/tmp/rl_output"
 diffu_output_path: "assets/tmp/diffu_output"
-
 
 rl_cfg:
   train_cfg:
@@ -68,8 +67,8 @@ diffu_cfg:
       total_num: 10240
       bs: 128
       complete_hand: True
-      scheduler_path: 'tb_logs/DrinkModel/version_0'
-      ckpt_path: 'tb_logs/DrinkModel/version_0/checkpoints/final.ckpt'
+      scheduler_path: ''
+      ckpt_path: ''
       save_path: "diffusion_output"
       category: ${task}
     model: ${diffu_model}
