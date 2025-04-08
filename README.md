@@ -1,6 +1,6 @@
 # DexTOG: Learning Task-Oriented Dexterous Grasp With Language Condition
 
-[**Paper**](https://ieeexplore.ieee.org/document/10803020) | [**Project Page**](https://dextog.robotflow.ai/) <br>
+[**Paper**](https://ieeexplore.ieee.org/document/10803020) | [**Arxiv**](https://arxiv.org/abs/2504.04573) | [**Project Page**](https://dextog.robotflow.ai/) <br>
 
 This repository offers the implementation of the research paper:
 
